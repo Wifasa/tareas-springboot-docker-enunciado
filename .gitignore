@@ -40,3 +40,5 @@ logs/
 
 # Base de datos H2 (ficheiros locais)
 data/
+
+.env
