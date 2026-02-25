@@ -25,7 +25,7 @@ services:
       context: . 
       dockerfile: Dockerfile 
     container_name: tareas-app 
-    # depends_on: 
+    image: tareas-app
     #   db: 
     #     condition: service_healthy 
     environment: 
@@ -34,7 +34,7 @@ services:
       POSTGRES_DB: ${POSTGRES_DB} 
       SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}:5432/${POSTGRES_DB} 
     ports: 
-      - "${SPRING_APP_PORT}:8080" 
+      - "${SPRING_APP_PORT}:80" 
     networks: 
       - dwcs
     restart: unless-stopped 
